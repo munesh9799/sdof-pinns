@@ -11,14 +11,15 @@ This repository contains PyTorch implementations of Physics-Informed Neural Netw
 - **Scaled forward modeling** using an ansatz with learnable sinusoidal modulation to handle higher frequencies (ω = 80).
 
 ## Governing equation
-\[
-u''(t) + 2\xi\omega u'(t) + \omega^2 u(t) = 0
-\]
-with initial conditions:
-\[
-u(0)=u_0,\quad u'(0)=v_0
-\]
+The dynamics of the single-degree-of-freedom (SDOF) system are governed by
 
+    u''(t) + 2 ξ ω u'(t) + ω² u(t) = 0
+
+with initial conditions
+
+    u(0) = u₀
+    u'(0) = v₀
+    
 This work has been presented at the 4th International Conference on Sustainable Development in Civil Engineering, 2025. For citation, refer to the following:
 ## Citation
 
