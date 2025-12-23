@@ -1,4 +1,4 @@
-# PINNs Project 1
+# sdof-pinns
 Single-Degree-Of-Freedom (SDOF) systems, despite their apparent simplicity, are fundamental building blocks for analyzing and interpreting the dynamic behavior of more complex multi-degree-of-freedom (MDOF) structures. Developing efficient and robust methodologies for both forward and inverse modeling of these systems is essential for various engineering applications, including structural design verification and structural health monitoring.
 
 In this project, we introduce the use of Physics-Informed Neural Networks (PINNs) for both the forward and inverse dynamic analyses of SDOF systems. In the forward formulation, our goal is to predict the structural response in terms of displacement, velocity, and acceleration based on known physical parameters and external excitations. Conversely, the inverse formulation aims to estimate unknown stiffness parameters using measured dynamic responses.
@@ -11,15 +11,14 @@ This repository contains PyTorch implementations of Physics-Informed Neural Netw
 - **Scaled forward modeling** using an ansatz with learnable sinusoidal modulation to handle higher frequencies (ω = 80).
 
 ## Governing equation
-The dynamics of the single-degree-of-freedom (SDOF) system are governed by
+\[
+u''(t) + 2\xi\omega u'(t) + \omega^2 u(t) = 0
+\]
+with initial conditions:
+\[
+u(0)=u_0,\quad u'(0)=v_0
+\]
 
-    u''(t) + 2 ξ ω u'(t) + ω² u(t) = 0
-
-with initial conditions
-
-    u(0) = u₀
-    u'(0) = v₀
-    
 This work has been presented at the 4th International Conference on Sustainable Development in Civil Engineering, 2025. For citation, refer to the following:
 ## Citation
 
